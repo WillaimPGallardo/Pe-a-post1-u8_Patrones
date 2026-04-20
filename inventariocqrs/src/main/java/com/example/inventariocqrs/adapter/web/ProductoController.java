@@ -1,9 +1,8 @@
 package com.example.inventariocqrs.adapter.web;
 
-import com.example.inventariocqrs.command.*;
-import com.example.inventariocqrs.command.handler.*;
-import com.example.inventariocqrs.query.*;
-import com.example.inventariocqrs.query.handler.*;
+import com.example.inventariocqrs.command.AgregarProductoCommand;
+import com.example.inventariocqrs.command.handler.AgregarProductoHandler;
+import com.example.inventariocqrs.query.handler.ListarProductosQueryHandler;
 import com.example.inventariocqrs.query.model.ProductoView;
 
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +30,6 @@ public class ProductoController {
 
     @GetMapping("/productos")
     public List<ProductoView> listar() {
-        return listar.handle(new ListarProductosQuery(false));
+        return listar.handle();
     }
 }

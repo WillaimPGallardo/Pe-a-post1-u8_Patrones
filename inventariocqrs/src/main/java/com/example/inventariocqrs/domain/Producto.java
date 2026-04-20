@@ -26,12 +26,6 @@ public class Producto {
         this.stockDisponible = Math.max(0, stockInicial);
     }
 
-    public void incrementarStock(int cantidad) {
-        if (cantidad <= 0)
-            throw new IllegalArgumentException("Cantidad inválida");
-        stockDisponible += cantidad;
-    }
-
     public void reducirStock(int cantidad) {
         if (cantidad > stockDisponible)
             throw new StockInsuficienteException(id.toString());
