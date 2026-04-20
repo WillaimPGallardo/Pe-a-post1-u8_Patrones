@@ -1,5 +1,8 @@
 package com.example.inventariocqrs.query.repository;
 
-public class ProductoReadRepository {
-    
+import com.example.inventariocqrs.query.model.ProductoView;
+import java.util.List;
+
+public interface ProductoReadRepository {
+    List<ProductoView> buscarTodos();
 }

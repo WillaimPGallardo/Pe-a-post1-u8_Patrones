@@ -1,5 +1,3 @@
 package com.example.inventariocqrs.command;
 
-public class EliminarProductoCommand {
-    
-}
+public record EliminarProductoCommand(String productoId) {}

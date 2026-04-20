@@ -1,5 +1,3 @@
 package com.example.inventariocqrs.query;
 
-public class ListarProductosQuery {
-    
-}
+public record ListarProductosQuery(boolean incluirAgotados) {}

@@ -1,5 +1,6 @@
 package com.example.inventariocqrs.command;
 
-public class ActualizarStockCommand {
-    
-}
+public record ActualizarStockCommand(
+        String productoId,
+        int cantidad
+) {}

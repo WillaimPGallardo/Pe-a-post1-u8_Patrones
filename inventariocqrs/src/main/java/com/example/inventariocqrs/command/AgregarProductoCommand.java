@@ -1,5 +1,10 @@
 package com.example.inventariocqrs.command;
 
-public class AgregarProductoCommand {
-    
-}
+import java.math.BigDecimal;
+
+public record AgregarProductoCommand(
+        String nombre,
+        String categoria,
+        BigDecimal precioUnitario,
+        int stockInicial
+) {}
